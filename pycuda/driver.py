@@ -371,7 +371,7 @@ def _add_functionality():
                 from time import time
                 start_time = time()
 
-            func._launch_kernel(grid, block, arg_buf, shared, None)
+            func._launch_kernel(tuple(grid), tuple(block), arg_buf, shared, None)
 
             if post_handlers or time_kernel:
                 Context.synchronize()
